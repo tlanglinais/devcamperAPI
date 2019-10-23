@@ -1,0 +1,2 @@
+mongodb+srv://db_user:Uc6bPUTh4CjNaYq4@devcamper-api-6k5qo.mongodb.net/test?retryWrites=true&w=majority
+db_user@Uc6bPUTh4CjNaYq4
