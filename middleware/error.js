@@ -1,5 +1,12 @@
 const ErrorResponse = require("../utils/errorResponse");
 
+/**
+ *
+ * @param {object} err Error object
+ * @param {object} req Request object
+ * @param {object} res Response object
+ * @param {function} next Next middleware function
+ */
 const errorHandler = (err, req, res, next) => {
   let error = { ...err };
 
