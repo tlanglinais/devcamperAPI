@@ -39,13 +39,15 @@ const PORT = process.env.PORT || 5000;
 app.use("/api/v1/bootcamps", require("./routes/bootcamps.js"));
 app.use("/api/v1/courses", require("./routes/courses.js"));
 app.use("/api/v1/auth", require("./routes/auth.js"));
+app.use("/api/v1/users", require("./routes/users.js"));
+app.use("/api/v1/reviews", require("./routes/reviews.js"));
 
 app.use(errorHandler);
 
 const server = app.listen(
   PORT,
   console.log(
-    `Server started in ${process.env.NODE_ENV} mode on port ${5000}`.yellow.bold
+    `Server started in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
   )
 );
 

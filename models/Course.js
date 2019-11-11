@@ -35,6 +35,11 @@ const CourseSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "Bootcamp",
     required: true
+  },
+  user: {
+    type: mongoose.Schema.ObjectId,
+    ref: "User",
+    required: true
   }
 });
 
@@ -67,7 +72,7 @@ CourseSchema.post("save", function() {
 });
 
 // Call getAverageCost before remove
-CourseSchema.pre("save", function() {
+CourseSchema.pre("remove", function() {
   this.constructor.getAverageCost(this.bootcamp);
 });
 
